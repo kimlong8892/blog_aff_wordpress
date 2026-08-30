@@ -1,0 +1,49 @@
+# === Docker ===
+.env
+mysql-data/
+
+# === WordPress Core ===
+# Config chứa credentials
+wordpress/wp-config.php
+
+# Upload files (thường quá nặng cho git)
+wordpress/wp-content/uploads/
+
+# Cache & backup plugins tạo ra
+wordpress/wp-content/cache/
+wordpress/wp-content/backup-db/
+wordpress/wp-content/backups/
+wordpress/wp-content/blogs.dir/
+wordpress/wp-content/upgrade/
+wordpress/wp-content/advanced-cache.php
+wordpress/wp-content/wp-cache-config.php
+wordpress/wp-content/db.php
+
+# WordPress debug log
+wordpress/wp-content/debug.log
+
+# === OS Generated ===
+.DS_Store
+.DS_Store?
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+._*
+
+# === IDE / Editor ===
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.settings/
+
+# === Logs ===
+*.log
+npm-debug.log*
+error_log
+
+# === Node (nếu dùng build tools cho theme/plugin) ===
+node_modules/
+package-lock.json
