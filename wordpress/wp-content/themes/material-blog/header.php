@@ -39,7 +39,7 @@
 		wp_nav_menu( array(
 			'theme_location' => 'primary',
 			'container'      => false,
-			'depth'          => 2,
+			'depth'          => 3,
 			'fallback_cb'    => 'material_blog_fallback_menu',
 		) );
 		?>

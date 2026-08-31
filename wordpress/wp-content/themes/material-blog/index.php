@@ -41,61 +41,52 @@ get_header();
 	<div class="md-layout md-layout--full">
 		<div class="md-content">
 			<?php if ( have_posts() ) : ?>
-				<div class="md-post-grid">
+				<div class="md-post-list">
 					<?php while ( have_posts() ) : the_post(); ?>
-						<article id="post-<?php the_ID(); ?>" <?php post_class( 'md-card' . ( is_sticky() ? ' md-card--sticky' : '' ) ); ?>>
+						<article id="post-<?php the_ID(); ?>" <?php post_class( 'md-horizontal-card' . ( is_sticky() ? ' md-horizontal-card--sticky' : '' ) ); ?>>
 							<!-- Card Media -->
-							<div class="md-card__media">
+							<div class="md-horizontal-card__media">
 								<?php if ( has_post_thumbnail() ) : ?>
 									<a href="<?php the_permalink(); ?>">
-										<?php the_post_thumbnail( 'large' ); ?>
+										<?php the_post_thumbnail( 'medium_large' ); ?>
 									</a>
 								<?php else : ?>
-									<a href="<?php the_permalink(); ?>" class="md-card__media-placeholder">
+									<a href="<?php the_permalink(); ?>" class="md-horizontal-card__media-placeholder">
 										<span class="material-symbols-outlined">article</span>
 									</a>
 								<?php endif; ?>
 							</div>
 
 							<!-- Card Body -->
-							<div class="md-card__body">
-								<!-- Meta: Categories -->
-								<div class="md-card__meta">
-									<?php
-									$categories = get_the_category();
-									if ( $categories ) :
-										foreach ( array_slice( $categories, 0, 2 ) as $cat ) :
-									?>
-										<a href="<?php echo esc_url( get_category_link( $cat->term_id ) ); ?>" class="md-chip">
-											<?php echo esc_html( $cat->name ); ?>
-										</a>
-									<?php
-										endforeach;
-									endif;
-									?>
-								</div>
-
+							<div class="md-horizontal-card__body">
 								<!-- Title -->
-								<h2 class="md-card__title">
+								<h2 class="md-horizontal-card__title">
 									<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 								</h2>
 
-								<!-- Excerpt -->
-								<div class="md-card__excerpt">
-									<?php the_excerpt(); ?>
+								<!-- Meta: Comments + Date -->
+								<div class="md-horizontal-card__meta">
+									<span class="material-symbols-outlined">chat_bubble</span>
+									<span class="md-horizontal-card__meta-comments">
+										<?php
+										$comments_num = get_comments_number();
+										if ( $comments_num == 0 ) {
+											echo '0 Bình luận';
+										} elseif ( $comments_num == 1 ) {
+											echo '1 Bình luận';
+										} else {
+											echo $comments_num . ' Bình luận';
+										}
+										?>
+									</span>
+									<span class="md-horizontal-card__meta-date">
+										<?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' trước'; ?>
+									</span>
 								</div>
 
-								<!-- Footer: Author + Date + Read More -->
-								<div class="md-card__footer">
-									<div class="md-card__author-date">
-										<span class="material-symbols-outlined">calendar_today</span>
-										<time datetime="<?php echo get_the_date( 'c' ); ?>"><?php echo get_the_date(); ?></time>
-										<span>&bull;</span>
-										<span><?php echo material_blog_reading_time(); ?></span>
-									</div>
-									<a href="<?php the_permalink(); ?>" class="md-btn md-btn--tonal">
-										Đọc tiếp
-									</a>
+								<!-- Excerpt -->
+								<div class="md-horizontal-card__excerpt">
+									<?php the_excerpt(); ?>
 								</div>
 							</div>
 						</article>
