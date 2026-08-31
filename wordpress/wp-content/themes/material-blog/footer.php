@@ -46,21 +46,6 @@ endif;
 					<p><?php bloginfo( 'description' ); ?></p>
 				</div>
 
-				<!-- Footer Menu -->
-				<div class="md-footer__links">
-					<h4 class="md-footer__col-title">Liên kết</h4>
-					<nav>
-						<?php
-						wp_nav_menu( array(
-							'theme_location' => 'footer',
-							'container'      => false,
-							'depth'          => 1,
-							'fallback_cb'    => false,
-						) );
-						?>
-					</nav>
-				</div>
-
 				<!-- Info Column -->
 				<div class="md-footer__info">
 					<h4 class="md-footer__col-title">Thông tin</h4>
@@ -71,12 +56,57 @@ endif;
 						</ul>
 					</nav>
 				</div>
+
+				<!-- Channels Column -->
+				<div class="md-footer__channels">
+					<h4 class="md-footer__col-title">Kênh liên kết</h4>
+					<nav>
+						<ul class="md-footer__channel-list">
+							<?php 
+							$list_channel = get_field( 'list_channel', 'option' );
+							if ( $list_channel ) : 
+								foreach ( $list_channel as $channel ) : 
+									$c_name = ! empty( $channel['channel_name'] ) ? esc_html( $channel['channel_name'] ) : '';
+									$c_url  = ! empty( $channel['channel_url'] ) ? esc_url( $channel['channel_url'] ) : '#';
+									$logo   = ! empty( $channel['logo'] ) ? $channel['logo'] : '';
+								?>
+									<li class="md-footer__channel-item">
+										<a href="<?php echo $c_url; ?>" target="_blank" rel="noopener noreferrer">
+											<?php if ( $logo === 'facebook' ) : ?>
+												<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="md-footer__channel-icon">
+													<path fill="#1877F2" d="M24 12a12 12 0 1 0-13.875 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385A12 12 0 0 0 24 12z"/>
+												</svg>
+											<?php elseif ( $logo === 'youtube' ) : ?>
+												<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="md-footer__channel-icon">
+													<path fill="#FF0000" d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.517 3.545 12 3.545 12 3.545s-7.517 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.871.508 9.388.508 9.388.508s7.517 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837z"/>
+													<path fill="#FFFFFF" d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+												</svg>
+											<?php elseif ( $logo === 'tiktok' ) : ?>
+												<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="md-footer__channel-icon">
+													<g fill-rule="evenodd">
+														<path fill="#25F4EE" d="M12.5 0v14.4a2.9 2.9 0 0 1-2.9 2.9 2.9 2.9 0 0 1-2.9-2.9 2.9 2.9 0 0 1 2.9-2.9c.28 0 .55.05.79.15V8.42a6 6 0 0 0-2.8-.69A6.05 6.05 0 0 0 1.62 14.1a6.05 6.05 0 0 0 6.06 6.06 6.05 6.05 0 0 0 5.95-4.98V7.32a7.93 7.93 0 0 0 4.89 1.66V5.94A4.88 4.88 0 0 1 15.1 4.42V1.43h-2.6z" transform="translate(-0.5, -0.5)"/>
+														<path fill="#FE2C55" d="M12.5 0v14.4a2.9 2.9 0 0 1-2.9 2.9 2.9 2.9 0 0 1-2.9-2.9 2.9 2.9 0 0 1 2.9-2.9c.28 0 .55.05.79.15V8.42a6 6 0 0 0-2.8-.69A6.05 6.05 0 0 0 1.62 14.1a6.05 6.05 0 0 0 6.06 6.06 6.05 6.05 0 0 0 5.95-4.98V7.32a7.93 7.93 0 0 0 4.89 1.66V5.94A4.88 4.88 0 0 1 15.1 4.42V1.43h-2.6z" transform="translate(0.5, 0.5)"/>
+														<path fill="currentColor" d="M12.5 0v14.4a2.9 2.9 0 0 1-2.9 2.9 2.9 2.9 0 0 1-2.9-2.9 2.9 2.9 0 0 1 2.9-2.9c.28 0 .55.05.79.15V8.42a6 6 0 0 0-2.8-.69A6.05 6.05 0 0 0 1.62 14.1a6.05 6.05 0 0 0 6.06 6.06 6.05 6.05 0 0 0 5.95-4.98V7.32a7.93 7.93 0 0 0 4.89 1.66V5.94A4.88 4.88 0 0 1 15.1 4.42V1.43h-2.6z"/>
+													</g>
+												</svg>
+											<?php endif; ?>
+											<span><?php echo $c_name; ?></span>
+										</a>
+									</li>
+								<?php 
+								endforeach;
+							else : 
+								echo '<li>Không có kênh liên kết</li>';
+							endif; 
+							?>
+						</ul>
+					</nav>
+				</div>
 			</div>
 
 			<!-- Bottom bar -->
 			<div class="md-footer__bottom">
 				<span>&copy; <?php echo date( 'Y' ); ?> <?php bloginfo( 'name' ); ?>. All rights reserved.</span>
-				<span>Powered by <a href="https://wordpress.org" target="_blank" rel="noopener">WordPress</a> &bull; Material Blog Theme</span>
 			</div>
 		</div>
 	</footer>

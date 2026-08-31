@@ -1517,6 +1517,43 @@ img {
   color: var(--md-primary);
 }
 
+/* Footer Channels Styling */
+.md-footer__channel-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.md-footer__channel-item {
+  margin-bottom: 8px;
+}
+
+.md-footer__channel-item a {
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--md-on-surface-variant);
+  text-decoration: none;
+  padding: 4px 0;
+  transition: color var(--md-motion-short) var(--md-motion-easing);
+}
+
+.md-footer__channel-item a:hover {
+  color: var(--md-primary);
+}
+
+.md-footer__channel-item a:hover .md-footer__channel-icon {
+  transform: scale(1.1);
+}
+
+.md-footer__channel-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  transition: transform var(--md-motion-short) var(--md-motion-easing);
+}
+
 .md-footer__bottom {
   display: flex;
   align-items: center;
