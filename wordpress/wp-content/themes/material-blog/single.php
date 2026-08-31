@@ -9,7 +9,7 @@ get_header();
 ?>
 
 <main class="md-page" role="main">
-	<div class="md-layout md-layout--full">
+	<div class="md-layout">
 		<div class="md-content">
 			<?php while ( have_posts() ) : the_post(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class( 'md-article' ); ?>>
@@ -107,9 +107,11 @@ get_header();
 
 				</article>
 			<?php endwhile; ?>
-		</div>
+		</div> <!-- .md-content -->
 
-	</div>
+		<?php get_sidebar(); ?>
+
+	</div> <!-- .md-layout -->
 </main>
 
 <?php get_footer(); ?>

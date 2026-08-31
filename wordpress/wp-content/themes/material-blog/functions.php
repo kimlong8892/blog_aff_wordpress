@@ -209,3 +209,64 @@ function material_blog_register_rest_fields() {
 }
 add_action( 'rest_api_init', 'material_blog_register_rest_fields' );
 
+/**
+ * Register ACF Options Page "Configs"
+ */
+if ( function_exists( 'acf_add_options_page' ) ) {
+	acf_add_options_page( array(
+		'page_title' => 'Configs',
+		'menu_title' => 'Configs',
+		'menu_slug'  => 'theme-configs',
+		'capability' => 'edit_posts',
+		'redirect'   => false,
+	) );
+}
+
+/**
+ * Post Views Tracker
+ */
+function material_blog_set_post_views( $post_id ) {
+	$count_key = 'post_views_count';
+	$count     = get_post_meta( $post_id, $count_key, true );
+	if ( '' === $count ) {
+		$count = 0;
+		delete_post_meta( $post_id, $count_key );
+		add_post_meta( $post_id, $count_key, '0' );
+	} else {
+		$count++;
+		update_post_meta( $post_id, $count_key, $count );
+	}
+}
+
+function material_blog_track_post_views() {
+	if ( is_single() ) {
+		global $post;
+		if ( isset( $post->ID ) ) {
+			material_blog_set_post_views( $post->ID );
+		}
+	}
+}
+add_action( 'wp_head', 'material_blog_track_post_views' );
+
+function material_blog_get_post_views( $post_id ) {
+	$count_key = 'post_views_count';
+	$count     = get_post_meta( $post_id, $count_key, true );
+	if ( '' === $count || false === $count ) {
+		return '0 lượt xem';
+	}
+	return number_format_i18n( $count ) . ' lượt xem';
+}
+
+/**
+ * Get Site Logo URL (Custom logo or Site Icon)
+ */
+function material_blog_get_site_logo_url() {
+	if ( has_custom_logo() ) {
+		$custom_logo_id = get_theme_mod( 'custom_logo' );
+		return wp_get_attachment_image_url( $custom_logo_id, 'full' );
+	} elseif ( get_option( 'site_icon' ) ) {
+		return get_site_icon_url( 128 );
+	}
+	return '';
+}
+

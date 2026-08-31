@@ -1,3 +1,41 @@
+<?php
+// Get ads fields from ACF Options page
+$ads = get_field( 'ads', 'option' );
+if ( $ads ) :
+	$left_ad  = isset( $ads['left'] ) ? $ads['left'] : null;
+	$right_ad = isset( $ads['right'] ) ? $ads['right'] : null;
+	
+	if ( ( $left_ad && ! empty( $left_ad['image'] ) ) || ( $right_ad && ! empty( $right_ad['image'] ) ) ) :
+	?>
+		<!-- Floating Gutters Ads -->
+		<div class="md-gutters-ads">
+			<?php if ( $left_ad && ! empty( $left_ad['image'] ) ) : 
+				$left_img_url = is_array( $left_ad['image'] ) ? $left_ad['image']['url'] : $left_ad['image'];
+				$left_target  = ! empty( $left_ad['url'] ) ? esc_url( $left_ad['url'] ) : '#';
+			?>
+				<div class="md-gutter-ad md-gutter-ad--left">
+					<a href="<?php echo $left_target; ?>" target="_blank" rel="noopener noreferrer">
+						<img src="<?php echo esc_url( $left_img_url ); ?>" alt="Quảng cáo bên trái">
+					</a>
+				</div>
+			<?php endif; ?>
+
+			<?php if ( $right_ad && ! empty( $right_ad['image'] ) ) : 
+				$right_img_url = is_array( $right_ad['image'] ) ? $right_ad['image']['url'] : $right_ad['image'];
+				$right_target  = ! empty( $right_ad['url'] ) ? esc_url( $right_ad['url'] ) : '#';
+			?>
+				<div class="md-gutter-ad md-gutter-ad--right">
+					<a href="<?php echo $right_target; ?>" target="_blank" rel="noopener noreferrer">
+						<img src="<?php echo esc_url( $right_img_url ); ?>" alt="Quảng cáo bên phải">
+					</a>
+				</div>
+			<?php endif; ?>
+		</div>
+	<?php
+	endif;
+endif;
+?>
+
 	<!-- Footer -->
 	<footer class="md-footer" role="contentinfo">
 		<div class="md-footer__inner">

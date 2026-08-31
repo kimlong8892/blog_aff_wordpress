@@ -751,7 +751,7 @@ img {
 }
 
 .md-horizontal-card__media {
-  width: 200px;
+  width: 140px; /* Reduced from 200px to prevent layout breakage on desktop */
   flex-shrink: 0;
   aspect-ratio: 16 / 9;
   overflow: hidden;
@@ -768,6 +768,14 @@ img {
 
 .md-horizontal-card:hover .md-horizontal-card__media img {
   transform: scale(1.03);
+}
+
+.md-fallback-logo {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  padding: 10px;
+  background-color: var(--md-surface-container-high);
 }
 
 .md-horizontal-card__media-placeholder {
@@ -796,9 +804,9 @@ img {
 
 .md-horizontal-card__title {
   font-family: 'Roboto Slab', serif;
-  font-size: 18px;
+  font-size: 15px; /* Reduced from 18px to fit 2-column layout */
   font-weight: 700;
-  line-height: 1.4;
+  line-height: 1.35;
   margin: 0;
 }
 
@@ -815,10 +823,11 @@ img {
 .md-horizontal-card__meta {
   display: flex;
   align-items: center;
-  gap: 6px;
-  font-size: 12px;
+  gap: 4px;
+  font-size: 11px; /* Reduced from 12px */
   color: var(--md-on-surface-variant);
   opacity: 0.8;
+  flex-wrap: wrap; /* Allow wrapping on small areas */
 }
 
 .md-horizontal-card__meta .material-symbols-outlined {
@@ -842,9 +851,24 @@ img {
   color: var(--md-outline-variant);
 }
 
+.md-horizontal-card__meta-views {
+  position: relative;
+  padding-left: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.md-horizontal-card__meta-views::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--md-outline-variant);
+}
+
 .md-horizontal-card__excerpt {
-  font-size: 13.5px;
-  line-height: 1.5;
+  font-size: 12.5px; /* Reduced from 13.5px */
+  line-height: 1.45;
   color: var(--md-on-surface-variant);
   margin-top: 2px;
   display: -webkit-box;
@@ -1181,8 +1205,7 @@ img {
    ============================================ */
 
 .md-sidebar {
-  position: sticky;
-  top: calc(var(--md-appbar-height) + 32px);
+  position: relative;
 }
 
 .md-sidebar .widget {
@@ -1267,6 +1290,105 @@ img {
 .md-sidebar .wp-block-tag-cloud a:hover {
   background-color: var(--md-primary-container);
   color: var(--md-on-primary-container);
+}
+
+/* --- ACF Pinned Posts Widget --- */
+.widget_pinned_posts {
+  margin-bottom: 32px;
+  position: sticky;
+  top: calc(var(--md-appbar-height) + 24px);
+  z-index: 100;
+}
+
+.md-pinned-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.md-pinned-item {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.md-pinned-item__media {
+  width: 80px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: var(--md-shape-xs);
+  overflow: hidden;
+  background-color: var(--md-surface-container);
+}
+
+.md-pinned-item__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--md-motion-short) var(--md-motion-easing);
+}
+
+.md-pinned-item:hover .md-pinned-item__media img {
+  transform: scale(1.04);
+}
+
+.md-pinned-item__media-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--md-primary-container), var(--md-secondary-container));
+}
+
+.md-pinned-item__media-placeholder .material-symbols-outlined {
+  font-size: 20px;
+  color: var(--md-on-primary-container);
+  opacity: 0.5;
+}
+
+.md-pinned-item__body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.md-pinned-item__title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.md-pinned-item__title a {
+  color: var(--md-on-surface);
+  text-decoration: none;
+  transition: color var(--md-motion-short) var(--md-motion-easing);
+}
+
+.md-pinned-item__title a:hover {
+  color: var(--md-primary);
+}
+
+.md-pinned-item__views {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: var(--md-on-surface-variant);
+  opacity: 0.8;
+}
+
+.md-pinned-item__views .material-symbols-outlined {
+  font-size: 14px !important;
 }
 
 /* ============================================
@@ -1848,5 +1970,81 @@ img {
   display: inline-block;
   vertical-align: middle;
   line-height: 1.4;
+}
+
+/* ============================================
+   FLOATING SIDE GUTTER ADS
+   ============================================ */
+.md-gutters-ads {
+  display: block;
+}
+
+.md-gutter-ad {
+  position: fixed;
+  top: calc(var(--md-appbar-height) + 32px); /* Safe margin below top header on shorter viewports */
+  width: 160px; /* Standard wide skyscraper width */
+  height: 600px; /* Fixed skyscraper height */
+  z-index: 90;
+  overflow: hidden;
+  border-radius: var(--md-shape-sm);
+  box-shadow: var(--md-elevation-1);
+  transition: transform var(--md-motion-short) var(--md-motion-easing),
+              box-shadow var(--md-motion-short) var(--md-motion-easing);
+}
+
+.md-gutter-ad a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.md-gutter-ad:hover {
+  transform: scale(1.02);
+  box-shadow: var(--md-elevation-2);
+}
+
+@media (min-height: 720px) {
+  .md-gutter-ad {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .md-gutter-ad:hover {
+    transform: translateY(-50%) scale(1.02);
+  }
+}
+
+.md-gutter-ad img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: inherit;
+}
+
+.md-gutter-ad--left {
+  right: calc(50% + 620px); /* Half of 1200px content width (600px) + 20px gap */
+}
+
+.md-gutter-ad--right {
+  left: calc(50% + 620px); /* Half of 1200px content width (600px) + 20px gap */
+}
+
+@media (max-width: 1560px) {
+  .md-gutter-ad {
+    width: 120px; /* Shrink to narrow skyscraper to fit tighter viewports */
+  }
+  .md-gutter-ad--left {
+    right: calc(50% + 610px); /* Move slightly closer */
+  }
+  .md-gutter-ad--right {
+    left: calc(50% + 610px);
+  }
+}
+
+@media (max-width: 1460px) {
+  /* Hide side gutter ads completely on screens too narrow to display them without overlapping content */
+  .md-gutters-ads {
+    display: none;
+  }
 }
 

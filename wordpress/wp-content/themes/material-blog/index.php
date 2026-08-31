@@ -38,7 +38,7 @@ get_header();
 		</div>
 	<?php endif; ?>
 
-	<div class="md-layout md-layout--full">
+	<div class="md-layout">
 		<div class="md-content">
 			<?php if ( have_posts() ) : ?>
 				<div class="md-post-list">
@@ -51,9 +51,18 @@ get_header();
 										<?php the_post_thumbnail( 'medium_large' ); ?>
 									</a>
 								<?php else : ?>
-									<a href="<?php the_permalink(); ?>" class="md-horizontal-card__media-placeholder">
-										<span class="material-symbols-outlined">article</span>
-									</a>
+									<?php
+									$site_logo = material_blog_get_site_logo_url();
+									if ( $site_logo ) :
+									?>
+										<a href="<?php the_permalink(); ?>">
+											<img src="<?php echo esc_url( $site_logo ); ?>" alt="<?php the_title_attribute(); ?>" class="md-fallback-logo">
+										</a>
+									<?php else : ?>
+										<a href="<?php the_permalink(); ?>" class="md-horizontal-card__media-placeholder">
+											<span class="material-symbols-outlined">article</span>
+										</a>
+									<?php endif; ?>
 								<?php endif; ?>
 							</div>
 
@@ -82,6 +91,10 @@ get_header();
 									<span class="md-horizontal-card__meta-date">
 										<?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' trước'; ?>
 									</span>
+									<span class="md-horizontal-card__meta-views">
+										<span class="material-symbols-outlined">visibility</span>
+										<span><?php echo material_blog_get_post_views( get_the_ID() ); ?></span>
+									</span>
 								</div>
 
 								<!-- Excerpt -->
@@ -102,9 +115,11 @@ get_header();
 					<p>Hãy thử tìm kiếm với từ khóa khác.</p>
 				</div>
 			<?php endif; ?>
-		</div>
+		</div> <!-- .md-content -->
 
-	</div>
+		<?php get_sidebar(); ?>
+
+	</div> <!-- .md-layout -->
 </main>
 
 <?php get_footer(); ?>
