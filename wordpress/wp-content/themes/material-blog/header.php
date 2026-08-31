@@ -18,11 +18,16 @@
 
 	<!-- Brand -->
 	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="md-appbar__brand">
-		<?php if ( has_custom_logo() ) : ?>
-			<?php
+		<?php
+		$logo_url = '';
+		if ( has_custom_logo() ) {
 			$custom_logo_id = get_theme_mod( 'custom_logo' );
 			$logo_url       = wp_get_attachment_image_url( $custom_logo_id, 'full' );
-			?>
+		} elseif ( get_option( 'site_icon' ) ) {
+			$logo_url       = get_site_icon_url( 128 );
+		}
+		?>
+		<?php if ( $logo_url ) : ?>
 			<img src="<?php echo esc_url( $logo_url ); ?>" alt="<?php bloginfo( 'name' ); ?>">
 		<?php endif; ?>
 		<span class="md-appbar__title"><?php bloginfo( 'name' ); ?></span>
