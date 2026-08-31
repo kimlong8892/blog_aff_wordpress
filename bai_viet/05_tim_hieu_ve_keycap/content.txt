@@ -1,0 +1,42 @@
+# Tất Tần Tật Về Keycap: Chất Liệu (ABS Vs PBT) Và Các Profile Keycap Phổ Biến
+
+Keycap – các nút nhựa trên bàn phím – không chỉ là phần che chắn và làm đẹp cho switch mà còn đóng vai trò cốt lõi trong trải nghiệm gõ hàng ngày. Khi chạm ngón tay vào bàn phím cơ, chất liệu nhựa và độ cao hay độ dốc (profile) của keycap sẽ trực tiếp quyết định bạn gõ có bám tay không, âm thanh trầm hay bổng, và cổ tay có bị mỏi hay không.
+
+Nếu bạn đang muốn nâng cấp giao diện hoặc cảm giác gõ cho chiếc bàn phím cơ của mình, hãy cùng tìm hiểu chi tiết các khía cạnh về chất liệu và profile keycap dưới đây.
+
+---
+
+## 1. So sánh chất liệu Keycap: ABS vs PBT
+
+Hầu hết các bộ keycap trên thị trường hiện nay được làm từ một trong hai loại nhựa: ABS hoặc PBT. Mỗi loại nhựa mang những đặc tính vật lý rất đặc trưng.
+
+### Nhựa ABS (Acrylonitrile Butadiene Styrene)
+*   **Đặc điểm:** Nhựa ABS có tính dẻo, dễ gia công, cho phép đúc keycap mỏng, sắc nét và có màu sắc cực kỳ bắt mắt, rực rỡ.
+*   **Hiện tượng "bóng phím" (Shine):** Đây là nhược điểm lớn nhất của ABS. Do nhựa ABS mềm và dễ mài mòn, sau một thời gian tiếp xúc với mồ hôi và ma sát từ ngón tay, bề mặt phím sẽ bị trơn láng bóng bẩy, tạo cảm giác hơi dính và mất thẩm mỹ.
+*   **Âm thanh:** Âm thanh gõ của keycap ABS thường đanh, vang và cao (clack).
+
+### Nhựa PBT (Polybutylene Terephthalate)
+*   **Đặc điểm:** Nhựa PBT cứng, chịu nhiệt tốt và có độ bền cực cao. Bề mặt keycap PBT thường có độ nhám mờ nhẹ tự nhiên.
+*   **Độ bền vượt trội:** Keycap PBT chống mài mòn cực tốt, không bị bóng phím hay bám vân tay kể cả sau nhiều năm sử dụng.
+*   **Âm thanh:** PBT cho âm thanh gõ trầm, ấm, đầm và chắc chắn hơn (thock).
+*   **Nhược điểm:** Do nhựa PBT khó co ngót khi đúc nhiệt nên các bộ keycap PBT siêu dài (như phím Spacebar) dễ bị cong vênh nhẹ trong quá trình sản xuất.
+
+**Lời khuyên:** Hãy chọn **nhựa PBT** nếu bạn ưu tiên độ bền lâu dài và cảm giác gõ nhám bám tay. Chọn **nhựa ABS** cao cấp (như các hãng GMK) nếu bạn muốn có bộ màu sắc độc lạ và rực rỡ nhất.
+
+---
+
+## 2. Tìm hiểu các Profile Keycap phổ biến
+
+Profile keycap là thuật ngữ chỉ chiều cao, hình dáng bề mặt và độ dốc công thái học của các hàng phím. Các profile khác nhau sẽ mang lại cảm giác gõ hoàn toàn khác biệt.
+
+*   **OEM Profile:** Đây là profile phổ biến nhất, được hầu hết các bàn phím cơ bán sẵn (như Keychron, Filco, Leopold) trang bị mặc định. Các phím có độ cao trung bình, thiết kế cong lượn sóng nhẹ theo hàng để ôm ngón tay.
+*   **Cherry Profile:** Rất được cộng đồng custom ưa chuộng. Cherry có hình dáng giống OEM nhưng thấp hơn một chút. Thiết kế này giúp ngón tay di chuyển giữa các hàng nhanh hơn và giảm mỏi cổ tay rõ rệt khi gõ văn bản lâu.
+*   **SA Profile:** Đây là profile siêu cao, có bề mặt phím lõm hình cầu (spherical) sâu để ôm trọn đầu ngón tay. SA mang phong cách vintage cổ điển cực kỳ đẹp mắt, cho âm thanh gõ trầm và vang nhất, nhưng do phím rất cao nên bắt buộc bạn phải dùng kèm kê tay (wrist rest) để đỡ mỏi cổ tay.
+*   **XDA Profile:** Là profile phẳng (uniform profile), nghĩa là tất cả các hàng keycap đều có chiều cao bằng nhau và mặt phím hơi bo tròn nhẹ. XDA cho cảm giác gõ khá thú vị và dễ phối keycap lẻ, nhưng người mới dùng sẽ dễ gõ nhầm hàng phím do không có độ dốc công thái học.
+*   **MDA / OEM-sculpted Profile:** Một profile lai giữa độ cao trung bình của OEM và bề mặt ôm ngón tay của SA, mang lại cảm giác gõ rất đầm và dễ làm quen.
+
+---
+
+## Kết luận
+
+Việc lựa chọn keycap là sự kết hợp giữa sở thích cá nhân về cả xúc giác lẫn thính giác. Một bộ keycap làm bằng **nhựa PBT** với **Cherry Profile** là sự đầu tư an toàn và hiệu quả nhất cho đa số người dùng mới, đảm bảo tính công thái học tốt giúp làm việc hiệu quả và độ bền chữ không bao giờ phai nhạt.

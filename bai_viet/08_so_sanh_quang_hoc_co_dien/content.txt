@@ -1,0 +1,52 @@
+# So Sánh Bàn Phím Cơ Quang Học (Optical) Và Bàn Phím Cơ Truyền Thống (Mechanical)
+
+Trong những năm gần đây, bên cạnh dòng bàn phím cơ truyền thống sử dụng công tắc cơ học (mechanical switch), thị trường đã xuất hiện thêm một dòng sản phẩm mới thu hút sự chú ý rất lớn: **Bàn phím cơ quang học (Optical Keyboard)**. 
+
+Được quảng cáo là có tốc độ phản hồi ánh sáng siêu tốc và tuổi thọ vô hạn, switch quang học đang thách thức vị thế thống trị của các loại switch cơ học truyền thống. Sự khác biệt thực sự giữa hai công nghệ này là gì và bạn nên đầu tư vào loại nào? Hãy cùng tìm hiểu chi tiết trong bài viết so sánh dưới đây.
+
+---
+
+## 1. Nguyên lý hoạt động: Kim loại tiếp xúc vs Tia sáng hồng ngoại
+
+Sự khác biệt cốt lõi nhất nằm ở cách thức switch ghi nhận (kích hoạt) tín hiệu gõ phím.
+
+### Switch cơ học truyền thống
+*   **Cơ chế:** Khi bạn nhấn phím, stem nhựa chuyển động đi xuống làm cho hai lá đồng tiếp xúc kim loại chạm vào nhau, tạo thành một mạch điện khép kín để gửi tín hiệu về máy tính.
+*   **Hiện tượng Debounce Delay:** Do tính chất kim loại đàn hồi, các lá đồng khi chạm nhau sẽ bị rung nhẹ (nháy). Bo mạch cần một khoảng thời gian trễ rất ngắn (khoảng 5ms) gọi là debounce delay để lọc tiếng nhiễu trước khi ghi nhận phím nhấn thực sự.
+
+### Switch quang học
+*   **Cơ chế:** Dưới bo mạch có một luồng ánh sáng hồng ngoại (tia sáng cảm biến) liên tục chiếu qua. Khi phím được nhấn xuống, chân switch sẽ đi xuống và chặn đường đi của tia sáng này (hoặc mở đường truyền sáng). Cảm biến ánh sáng phát hiện sự thay đổi này và ngay lập tức gửi tín hiệu kích hoạt.
+*   **Tốc độ ánh sáng:** Vì không có tiếp xúc kim loại, hiện tượng debounce delay bị loại bỏ hoàn toàn. Tín hiệu được kích hoạt gần như tức thời ở tốc độ ánh sáng (khoảng 0.2ms).
+
+---
+
+## 2. So sánh các tiêu chí quan trọng
+
+### Độ bền và tuổi thọ
+*   **Quang học:** Cực kỳ bền bỉ. Do không có sự cọ xát và oxy hóa của các lá đồng kim loại, switch quang học có tuổi thọ lên tới hơn 100 triệu lần nhấn, đồng thời chống nước và bụi bẩn cực tốt.
+*   **Truyền thống:** Tuổi thọ trung bình khoảng 50 - 80 triệu lần gõ. Lá đồng có thể bị rỉ sét, oxy hóa hoặc biến dạng cơ học theo thời gian, dẫn đến lỗi double-click hoặc không nhận phím.
+
+### Cảm giác gõ phím
+*   **Truyền thống:** Cực kỳ đa dạng và phong phú. Có hàng trăm loại switch khác nhau trên thị trường với cảm giác gõ, độ khấc phản hồi khác biệt rõ nét và âm thanh trầm bổng đặc trưng rất phong phú.
+*   **Quang học:** Tuy mượt mà nhưng trải nghiệm gõ có phần đơn điệu và ít sự lựa chọn hơn nhiều so với switch cơ truyền thống.
+
+### Khả năng Custom và Modding
+*   **Truyền thống:** Là bá chủ của giới chơi bàn phím custom. Bạn có thể dễ dàng thay đổi bất kỳ loại switch chân đồng 3-pin hay 5-pin nào vào bo mạch hot-swap để thử nghiệm âm thanh.
+*   **Quang học:** Rất hạn chế. Bàn phím cơ quang học chỉ cắm được các switch quang học cùng hãng thiết kế. Bạn hoàn toàn không thể lắp các switch cơ học truyền thống chân đồng vào bo mạch quang học và ngược lại.
+
+---
+
+## Bảng so sánh tổng quan
+
+| Đặc tính | Bàn phím cơ truyền thống | Bàn phím cơ quang học |
+| :--- | :--- | :--- |
+| **Nguyên lý kích hoạt** | Tiếp xúc lá đồng vật lý | Chặn/Mở tia sáng cảm biến |
+| **Tốc độ phản hồi** | Khoảng 5 - 10ms | Siêu tốc (~0.2ms) |
+| **Tuổi thọ trung bình** | 50 - 80 triệu lần nhấn | 100 triệu+ lần nhấn |
+| **Khả năng chống nước** | Kém (dễ chập mạch lá đồng) | Khá tốt (mạch phủ nano bảo vệ) |
+| **Mức độ đa dạng switch**| Vô cùng phong phú | Ít phổ biến, khó thay thế lẻ |
+
+## Bạn nên chọn loại bàn phím nào?
+
+*   Hãy chọn **Bàn phím cơ quang học** nếu: Bạn là game thủ esports chuyên nghiệp cần tốc độ phản xạ nhanh nhất có thể, hoặc cần một thiết bị siêu bền bỉ trong môi trường khắc nghiệt, chống bụi nước tuyệt đối.
+*   Hãy chọn **Bàn phím cơ truyền thống** nếu: Bạn gõ phím phục vụ công việc hàng ngày, yêu thích cảm giác gõ tinh tế, thích modding, lube switch và thích cá nhân hóa trải nghiệm âm thanh đa dạng nhất có thể.

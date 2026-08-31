@@ -1,0 +1,47 @@
+# Lịch Sử Phát Triển Của Bàn Phím Cơ: Từ IBM Model M Huyền Thoại Đến Kỷ Nguyên Custom
+
+Ngày nay, bàn phím cơ được xem là biểu tượng của sự hiện đại, công nghệ cao và cá tính cá nhân. Thế nhưng, ít ai biết rằng công nghệ phím cơ thực chất đã có tuổi đời hàng thập kỷ và từng trải qua những giai đoạn thăng trầm lịch sử đầy thú vị – từ vị thế thống trị, bị ghẻ lạnh rồi hồi sinh ngoạn mục để trở thành món đồ không thể thiếu của hàng triệu người.
+
+Hãy cùng quay ngược thời gian để tìm hiểu về hành trình phát triển của bàn phím cơ từ những ngày đầu sơ khai cho đến thời đại bàn phím custom đa sắc màu ngày nay.
+
+---
+
+## 1. Thời kỳ hoàng kim sơ khai và huyền thoại IBM Model M (Thập niên 1980)
+
+Vào những năm 1980, khi máy tính cá nhân bắt đầu xuất hiện trong các văn phòng và hộ gia đình, bàn phím cơ là thiết bị tiêu chuẩn duy nhất lúc bấy giờ. Mọi máy tính đi kèm đều sử dụng switch cơ học độc lập dưới từng phím nhấn để đảm bảo độ tin cậy tuyệt đối.
+
+*   **Sự xuất hiện của IBM Model M (1985):** Đây được mệnh danh là chiếc bàn phím cơ vĩ đại nhất mọi thời đại. Model M sử dụng công nghệ switch **Buckling Spring** (lò xo uốn cong). Khi nhấn phím, lò xo bên trong sẽ nén lại cho đến khi đột ngột gập cong sang bên, gõ vào thành nhựa tạo ra âm thanh tách tách đanh gọn và lực phản hồi cực kỳ rõ nét.
+*   **Đặc điểm:** Những chiếc bàn phím thời kỳ này cực kỳ nặng (thường nặng hơn 2kg do có plate bằng thép dày bên trong), có độ bền huyền thoại (nhiều chiếc Model M sản xuất năm 1985 đến nay vẫn hoạt động hoàn hảo).
+
+---
+
+## 2. Thời kỳ suy thoái khi bàn phím màng cao su lên ngôi (Thập niên 1990)
+
+Sự phát triển mạnh mẽ của máy tính cá nhân dẫn đến nhu cầu cắt giảm chi phí sản xuất phần cứng để tiếp cận người tiêu dùng bình dân hơn.
+
+*   **Sự lên ngôi của bàn phím màng cao su (Membrane Keyboard):** Bàn phím màng cao su có chi phí chế tạo rẻ hơn hàng chục lần so với bàn phím cơ. Chúng sử dụng các tấm bảng mạch dẻo và các núm cao su đàn hồi để ghi nhận phím gõ.
+*   **Hậu quả:** Bàn phím cơ nhanh chóng bị coi là công nghệ lỗi thời, cồng kềnh và đắt đỏ. Các hãng lớn dừng sản xuất phím cơ. Cảm giác gõ phím của cả thế giới bị chuyển sang dạng phím cao su mềm, dính và không có phản hồi lực đặc sắc.
+
+---
+
+## 3. Sự hồi sinh nhờ cộng đồng Game thủ và nhà Cherry (Thập niên 2000)
+
+Sự hồi sinh của bàn phím cơ bắt đầu từ nhu cầu của một nhóm đối tượng đặc biệt: Các game thủ chuyên nghiệp. Các tựa game thể thao điện tử (Esports) thời kỳ đầu như StarCraft hay Counter-Strike yêu cầu thiết bị có tốc độ phản hồi cực nhanh, độ bền cao và không bị kẹt phím (ghosting).
+
+*   **Thương hiệu Cherry Đức:** Cherry đã duy trì sản xuất dòng switch **Cherry MX** từ năm 1983. Khi các hãng gaming (như SteelSeries, Razer, Filco) bắt đầu tích hợp Cherry MX switch vào bàn phím chơi game của họ, game thủ lập tức nhận ra sự vượt trội hoàn toàn về tốc độ và cảm giác nhấn.
+*   **Hồi sinh rực rỡ:** Bàn phím cơ chính thức trở lại với tên gọi mới: Bàn phím chơi game (Gaming Keyboard) với thiết kế hầm hố, LED RGB rực rỡ.
+
+---
+
+## 4. Kỷ nguyên của Bàn phím cơ Custom và Cá nhân hóa (Thập niên 2010 - Hiện nay)
+
+Khi bằng sáng chế switch Cherry MX hết hạn vào năm 2014, một loạt các hãng sản xuất switch khác ra đời (Gateron, Kailh, Outemu...) giúp hạ giá thành bàn phím cơ xuống mức cực kỳ tiếp cận.
+
+Đồng thời, người dùng bắt đầu chán các mẫu bàn phím gaming nhựa đen hầm hố. Họ muốn những chiếc bàn phím gọn gàng hơn, có tiếng gõ êm ái hơn và màu sắc nghệ thuật hơn.
+*   **Sự bùng nổ của Custom Keyboard:** Người dùng tự chọn vỏ case (nhôm, gỗ, acrylic), mạch PCB hỗ trợ thay nóng switch (Hot-swap), switch tự bôi trơn (lube), và các bộ keycap thiết kế nghệ thuật độc đáo. Bàn phím cơ không còn là công cụ nhập liệu đơn thuần mà đã trở thành một tác phẩm nghệ thuật trang trí bàn làm việc thể hiện gu thẩm mỹ riêng.
+
+---
+
+## Kết luận
+
+Từ một thiết bị văn phòng thô sơ nặng nề của những năm 80, trải qua thời kỳ bị quên lãng, bàn phím cơ đã lột xác ngoạn mục để trở thành biểu tượng của văn hóa làm việc hiện đại và sáng tạo. Sự kết hợp giữa công nghệ chế tạo cơ khí bền bỉ và nghệ thuật thiết kế cá nhân hóa chính là lý do khiến bàn phím cơ sẽ tiếp tục đồng hành cùng chúng ta trong rất nhiều thập kỷ tới.

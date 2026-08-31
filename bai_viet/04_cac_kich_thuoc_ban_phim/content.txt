@@ -1,0 +1,72 @@
+# So Sánh Các Kích Thước Bàn Phím Cơ Phổ Biến: Fullsize, TKL, 75%, 65% Và 60%
+
+Khi tìm kiếm một chiếc bàn phím cơ, bên cạnh switch hay keycap, **Layout (kích thước/bố cục bàn phím)** là yếu tố đầu tiên bạn cần quan tâm. Kích thước phím ảnh hưởng trực tiếp đến diện tích làm việc của bạn, thói quen gõ hàng ngày và khả năng di động khi cần mang đi xa.
+
+Bàn phím cơ hiện nay không chỉ có một kích thước chuẩn như các bàn phím văn phòng truyền thống. Chúng được chia làm nhiều phân khúc kích thước khác nhau dựa trên tỷ lệ phần trăm so với kích thước gốc (Fullsize). Hãy cùng so sánh 5 layout phổ biến nhất dưới đây để tìm ra kích thước tối ưu cho góc làm việc của bạn.
+
+---
+
+## 1. Fullsize Layout (100% – Tiêu chuẩn truyền thống)
+
+Đây là kích thước kinh điển nhất mà ai cũng từng nhìn thấy. Layout này sở hữu đầy đủ từ 104 đến 108 phím, bao gồm hàng phím F, cụm mũi tên điều hướng độc lập và cụm phím số (Numpad) bên tay phải.
+
+*   **Ưu điểm:** Đầy đủ mọi tính năng, cực kỳ tiện lợi cho những người làm việc nhập liệu, kế toán, lập trình hoặc chơi game cần nhiều phím macro gắn sẵn.
+*   **Nhược điểm:** Chiếm rất nhiều diện tích mặt bàn. Tay phải di chuyển giữa phím chữ và chuột xa hơn, dễ gây mỏi vai và cổ tay sau thời gian dài.
+*   **Đối tượng thích hợp:** Người làm văn phòng cần nhập liệu số nhiều, người không có nhu cầu di chuyển bàn phím và có không gian bàn làm việc rộng rãi.
+
+---
+
+## 2. Tenkeyless Layout (TKL / 80% – Cân bằng hoàn hảo)
+
+Layout TKL loại bỏ hoàn toàn cụm phím số Numpad bên phải, chỉ giữ lại các cụm phím chữ, hàng F và cụm điều hướng/mũi tên độc lập (khoảng 87 phím).
+
+*   **Ưu điểm:** Giải phóng một khoảng không gian đáng kể cho tay phải di chuột, giúp tư thế ngồi làm việc công thái học hơn. Dễ dàng tìm mua keycap thay thế vì đây là layout vô cùng phổ biến.
+*   **Nhược điểm:** Thiếu Numpad gây bất tiện nhỏ nếu bạn cần nhập các số liệu nhanh.
+*   **Đối tượng thích hợp:** Các game thủ (cần diện tích chuột rộng để vẩy chuột), người viết lách, văn phòng phổ thông.
+
+---
+
+## 3. Layout 75% (Tối ưu hóa không gian)
+
+Layout 75% giữ lại lượng phím tương đương TKL (khoảng 82-84 phím) nhưng các phím được thu hẹp khoảng cách lại, ép sát vào nhau để tạo nên một khối liền mạch không có khe hở.
+
+*   **Ưu điểm:** Tiết kiệm không gian hơn TKL nhưng vẫn giữ nguyên hàng phím chức năng F và cụm phím mũi tên độc lập. Vẻ ngoài trông rất cân đối, hiện đại và trẻ trung.
+*   **Nhược điểm:** Do khoảng cách phím sát nhau nên thời gian đầu dễ gõ nhầm các phím cạnh bên.
+*   **Đối tượng thích hợp:** Lập trình viên, người làm sáng tạo nội dung thích sự nhỏ gọn nhưng vẫn cần hàng F và mũi tên.
+
+---
+
+## 4. Layout 65% (Nhỏ gọn thực dụng)
+
+Layout 65% loại bỏ hoàn toàn hàng phím F phía trên cùng (tích hợp phím F vào hàng số qua tổ hợp Fn) nhưng vẫn giữ lại cụm phím mũi tên điều hướng thiết yếu và một vài phím chức năng phụ dọc cạnh phải (khoảng 67-68 phím).
+
+*   **Ưu điểm:** Cực kỳ nhỏ gọn, dễ dàng bỏ vào balo mang đi làm việc quán cafe hay đi công tác. Giữ lại cụm phím mũi tên giúp việc soạn thảo văn bản hay điều hướng tài liệu vẫn rất dễ dàng.
+*   **Nhược điểm:** Việc gõ các phím F (F1-F12) phải sử dụng tổ hợp phím (Fn + Số) hơi bất tiện.
+*   **Đối tượng thích hợp:** Người hay di chuyển, coder làm việc với các hệ thống không cần hàng F quá nhiều.
+
+---
+
+## 5. Layout 60% (Tối giản tối đa)
+
+Layout 60% chỉ giữ lại vùng phím gõ chữ trung tâm chính. Cụm phím mũi tên, hàng phím F, cụm điều hướng đều bị loại bỏ hoàn toàn (khoảng 61 phím).
+
+*   **Ưu điểm:** Layout tối giản và gọn gàng nhất. Cực kỳ gọn nhẹ và mang lại vẻ đẹp mỹ thuật tối giản (minimalism) ấn tượng cho góc làm việc.
+*   **Nhược điểm:** Mọi chức năng điều hướng và phím tắt đều phải qua các tổ hợp phím phức tạp, đòi hỏi thời gian dài để làm quen và ghi nhớ.
+*   **Đối tượng thích hợp:** Game thủ FPS thuần túy (không dùng phím số/mũi tên), người yêu thích phong cách tối giản tuyệt đối.
+
+---
+
+## Bảng so sánh nhanh các kích thước bàn phím
+
+| Layout | Số phím trung bình | Hàng phím F | Phím mũi tên | Cụm số (Numpad) | Độ tiện lợi |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Fullsize (100%)** | 104 - 108 | Có | Có | Có | Cao nhất (cho số liệu) |
+| **TKL (80%)** | 87 | Có | Có | Không | Rất tốt (cho mọi tác vụ) |
+| **75%** | 82 - 84 | Có | Có | Không | Tốt, nhỏ gọn hơn |
+| **65%** | 67 - 68 | Không (Fn) | Có | Không | Khá tốt (viết lách tốt) |
+| **60%** | 61 | Không (Fn) | Không (Fn) | Không | Trung bình (cần học phím) |
+
+## Lời khuyên lựa chọn
+*   Nếu bạn làm việc văn phòng bình thường, viết lách và thỉnh thoảng chơi game: Hãy chọn **TKL hoặc 75%** để bắt đầu.
+*   Nếu bạn hay mang bàn phím ra ngoài làm việc và cần sự gọn nhẹ: Hãy chọn **65%**.
+*   Nếu bạn chỉ chơi game bắn súng FPS và thích sự gọn gàng tuyệt đối trên bàn: Hãy chọn **60%**.

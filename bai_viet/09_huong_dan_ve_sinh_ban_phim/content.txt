@@ -1,0 +1,49 @@
+# Hướng Dẫn Vệ Sinh Bàn Phím Cơ Đúng Cách Tại Nhà Không Lo Hỏng Hóc
+
+Sau một thời gian sử dụng, chiếc bàn phím cơ của bạn chắc chắn sẽ bám đầy bụi bẩn, vụn thức ăn rơi vãi, tóc và cả mồ hôi tay trên keycap. Vệ sinh bàn phím định kỳ không chỉ bảo vệ sức khỏe của bạn khỏi vi khuẩn mà còn giúp phím hoạt động mượt mà hơn, tránh các sự cố kẹt phím hoặc hỏng hóc switch không đáng có.
+
+Tuy nhiên, do bàn phím cơ có cấu tạo phức tạp với các bảng mạch điện tử nhạy cảm, việc vệ sinh không đúng cách có thể làm rỉ sét mạch hoặc gãy hỏng chân switch. Dưới đây là quy trình 5 bước vệ sinh bàn phím cơ chuyên nghiệp, an toàn ngay tại nhà.
+
+---
+
+## 1. Các dụng cụ cần chuẩn bị
+
+Hãy chuẩn bị một số món đồ cơ bản sau trước khi tiến hành vệ sinh:
+*   **Keycap Puller:** Dụng cụ gắp tháo keycap chuyên dụng.
+*   **Chổi quét bụi nhỏ:** Hoặc cọ trang điểm để quét luồn lách.
+*   **Bình xịt khí nén (nếu có):** Dùng để thổi bay bụi bẩn trong các khe nhỏ.
+*   **Tăm bông và cồn vệ sinh (Isopropyl Alcohol):** Dùng cồn 70 độ hoặc 90 độ khô nhanh, không dẫn điện.
+*   **Nước rửa chén và một chậu nước ấm.**
+*   **Khăn lau mềm không xơ.**
+
+---
+
+## 2. Quy trình 5 bước vệ sinh bàn phím cơ an toàn
+
+### Bước 1: Ngắt kết nối bàn phím
+Rút cáp kết nối USB hoặc tắt nút nguồn không dây, tháo pin (nếu có) của bàn phím. Việc vệ sinh thiết bị khi vẫn còn cắm nguồn điện có thể gây ra hiện tượng chập cháy mạch điện cực kỳ nguy hiểm.
+
+### Bước 2: Chụp ảnh lưu lại bố cục phím
+Trước khi tháo phím, hãy dùng điện thoại chụp lại một bức ảnh tổng thể bàn phím. Bức ảnh này sẽ giúp bạn dễ dàng lắp lại các nút keycap vào đúng vị trí sau khi hoàn thành.
+
+### Bước 3: Tháo và vệ sinh Keycap
+1.  Sử dụng Keycap Puller kéo thẳng keycap lên theo hướng vuông góc để tránh làm gãy stem nhựa của switch.
+2.  Bỏ tất cả keycap vào chậu nước ấm pha một ít nước rửa chén. Ngâm khoảng 10-15 phút.
+3.  Dùng bàn chải mềm chà nhẹ mặt trong và ngoài từng keycap để loại bỏ mồ hôi và chất bẩn cứng đầu bám lâu ngày.
+4.  Rửa sạch lại với nước và úp keycap lên một chiếc khăn khô. Để keycap khô tự nhiên hoàn toàn (thường mất từ 3-6 tiếng). *Lưu ý: Không dùng máy sấy nhiệt độ cao vì có thể làm biến dạng các keycap nhựa.*
+
+### Bước 4: Vệ sinh bộ khung vỏ và Switch
+1.  Dốc ngược bàn phím xuống và vỗ nhẹ vào mặt sau để các bụi bẩn lớn, vụn bánh rơi ra ngoài.
+2.  Dùng chổi quét bụi hoặc bình xịt khí nén làm sạch toàn bộ bụi bẩn bám xung quanh chân switch trên phần plate.
+3.  Dùng tăm bông thấm một lượng cồn vệ sinh vừa phải (không quá ướt sũng) để lau chùi các khe hở và các chất bẩn dính trên plate và xung quanh switch. Cồn sẽ giúp diệt khuẩn cực mạnh và bay hơi tự động rất nhanh.
+
+### Bước 5: Lắp ráp lại hoàn chỉnh
+1.  Đảm bảo mạch phím, switch và toàn bộ các nút keycap đã khô ráo 100%. Lắp ráp keycap khi còn ướt sẽ làm nước lọt vào switch gây hư hỏng mạch.
+2.  Nhìn vào bức ảnh bố cục phím đã chụp ở Bước 2 để lắp các nút keycap về đúng hàng. Nhấn nhẹ tay cho đến khi phím khớp chặt vào switch.
+3.  Cắm cáp kết nối và kiểm tra hoạt động của từng phím.
+
+---
+
+## Kết luận
+
+Việc vệ sinh bàn phím cơ nên được thực hiện định kỳ khoảng **2 đến 3 tháng một lần** tùy vào tần suất sử dụng của bạn. Việc giữ gìn chiếc bàn phím sạch sẽ không chỉ mang lại cảm hứng làm việc mới mẻ, gõ êm tai hơn mà còn gia tăng đáng kể tuổi thọ của thiết bị!
