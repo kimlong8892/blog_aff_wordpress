@@ -150,38 +150,27 @@ endif;
 			}
 		});
 
-		// --- Live Search ---
+		// --- Autocomplete Live Search Suggestions ---
 		var searchInput = document.getElementById('md-search-input');
-		var mdContent   = document.querySelector('.md-content');
-		var pagination  = document.querySelector('.md-pagination');
-		var archiveHead = document.querySelector('.md-archive-header');
+		var suggestionsContainer = document.getElementById('md-search-suggestions');
 		
-		if (searchInput && mdContent) {
-			var originalContent = mdContent.innerHTML;
-			var originalPaginationDisplay = pagination ? pagination.style.display : '';
-			var originalArchiveHeadDisplay = archiveHead ? archiveHead.style.display : '';
+		if (searchInput && suggestionsContainer) {
 			var searchDebounce = null;
 			var currentQuery = '';
 
-			// Helper to create skeleton loading html
-			var getSkeletonHTML = function() {
-				var cards = '';
-				for (var i = 0; i < 4; i++) {
-					cards += '<article class="md-card md-card--skeleton md-pulse">' +
-						'<div class="md-card__media" style="aspect-ratio: 16/9;"></div>' +
-						'<div class="md-card__body">' +
-							'<div class="md-card--skeleton-text" style="height: 16px; width: 40%; margin-bottom: 16px;"></div>' +
-							'<div class="md-card--skeleton-text" style="height: 24px; width: 85%; margin-bottom: 12px;"></div>' +
-							'<div class="md-card--skeleton-text" style="height: 14px; width: 100%; margin-bottom: 8px;"></div>' +
-							'<div class="md-card--skeleton-text" style="height: 14px; width: 70%; margin-bottom: 24px;"></div>' +
-							'<div class="md-card__footer" style="border: none; padding: 0;">' +
-								'<div class="md-card--skeleton-text" style="height: 16px; width: 50%; margin: 0;"></div>' +
-								'<div class="md-card--skeleton-text" style="height: 36px; width: 90px; border-radius: 20px; margin: 0;"></div>' +
-							'</div>' +
+			// Helper to create skeleton loading html inside dropdown
+			var getDropdownSkeletonHTML = function() {
+				var items = '';
+				for (var i = 0; i < 3; i++) {
+					items += '<div class="md-search-suggestions__skeleton md-pulse">' +
+						'<div class="md-search-suggestions__skeleton-image"></div>' +
+						'<div class="md-search-suggestions__skeleton-info">' +
+							'<div class="md-search-suggestions__skeleton-title"></div>' +
+							'<div class="md-search-suggestions__skeleton-meta"></div>' +
 						'</div>' +
-					'</article>';
+					'</div>';
 				}
-				return '<div class="md-post-grid">' + cards + '</div>';
+				return items;
 			};
 
 			searchInput.addEventListener('input', function(e) {
@@ -190,41 +179,25 @@ endif;
 				if (query === currentQuery) return;
 				currentQuery = query;
 
-				// Update browser URL query parameter '?q='
-				var params = new URLSearchParams(window.location.search);
-				if (query.length > 0) {
-					params.set('q', query);
-				} else {
-					params.delete('q');
-				}
-				var newSearch = params.toString();
-				var newUrl = window.location.pathname + (newSearch ? '?' + newSearch : '');
-				window.history.replaceState({ path: newUrl }, '', newUrl);
-
 				// Clear active debounce timer
 				if (searchDebounce) {
 					clearTimeout(searchDebounce);
 				}
 
 				if (query.length === 0) {
-					// Restore original content
-					mdContent.innerHTML = originalContent;
-					if (pagination) pagination.style.display = originalPaginationDisplay;
-					if (archiveHead) archiveHead.style.display = originalArchiveHeadDisplay;
+					suggestionsContainer.innerHTML = '';
+					suggestionsContainer.classList.remove('is-visible');
 					return;
 				}
 
-				// Hide standard pagination and archive title
-				if (pagination) pagination.style.display = 'none';
-				if (archiveHead) archiveHead.style.display = 'none';
-
-				// Show skeleton loading indicator
-				mdContent.innerHTML = getSkeletonHTML();
+				// Show suggestions container and the skeleton loaders
+				suggestionsContainer.classList.add('is-visible');
+				suggestionsContainer.innerHTML = getDropdownSkeletonHTML();
 
 				// Debounce request by 300ms
 				searchDebounce = setTimeout(function() {
 					var restBase = '<?php echo esc_url( get_rest_url( null, '/wp/v2/posts' ) ); ?>';
-					var url = restBase + (restBase.indexOf('?') !== -1 ? '&' : '?') + 'search=' + encodeURIComponent(query) + '&_embed=wp:featuredmedia,wp:term';
+					var url = restBase + (restBase.indexOf('?') !== -1 ? '&' : '?') + 'search=' + encodeURIComponent(query) + '&_embed=wp:featuredmedia,wp:term&per_page=10';
 					
 					fetch(url)
 						.then(function(res) {
@@ -233,82 +206,88 @@ endif;
 						})
 						.then(function(posts) {
 							// Check if user has cleared query during request
-							if (currentQuery.length === 0) return;
+							if (currentQuery !== query) return;
 
 							if (posts.length === 0) {
-								mdContent.innerHTML = '<div class="md-no-posts">' +
+								suggestionsContainer.innerHTML = '<div class="md-search-suggestions__status">' +
 									'<span class="material-symbols-outlined">search_off</span>' +
-									'<h2>Không tìm thấy bài viết</h2>' +
-									'<p>Hãy thử tìm kiếm với từ khóa khác.</p>' +
+									'Không tìm thấy bài viết' +
 								'</div>';
 								return;
 							}
 
-							// Render post cards
-							var html = '<div class="md-post-grid">';
+							// Render suggestion items
+							var html = '';
 							posts.forEach(function(post) {
 								var dateObj = new Date(post.date);
 								var dateStr = dateObj.toLocaleDateString('vi-VN', { day: 'numeric', month: 'short', year: 'numeric' });
 								var readingTime = post.reading_time || '1 phút đọc';
 
-								// Media image
-								var mediaHTML = '';
+								// Thumbnail image or fallback icon
+								var imageHTML = '<span class="material-symbols-outlined">article</span>';
 								if (post._embedded && post._embedded['wp:featuredmedia'] && post._embedded['wp:featuredmedia'][0]) {
 									var media = post._embedded['wp:featuredmedia'][0];
-									mediaHTML = '<a href="' + post.link + '"><img src="' + media.source_url + '" alt="' + post.title.rendered + '"></a>';
-								} else {
-									mediaHTML = '<a href="' + post.link + '" class="md-card__media-placeholder"><span class="material-symbols-outlined">article</span></a>';
+									var thumbUrl = media.media_details && media.media_details.sizes && media.media_details.sizes.thumbnail 
+										? media.media_details.sizes.thumbnail.source_url 
+										: media.source_url;
+									imageHTML = '<img src="' + thumbUrl + '" alt="' + post.title.rendered + '">';
 								}
 
-								// Categories
-								var catsHTML = '';
-								if (post._embedded && post._embedded['wp:term'] && post._embedded['wp:term'][0]) {
-									var terms = post._embedded['wp:term'][0];
-									terms.slice(0, 2).forEach(function(term) {
-										catsHTML += '<a href="' + term.link + '" class="md-chip">' + term.name + '</a> ';
-									});
-								}
-
-								html += '<article class="md-card">' +
-									'<div class="md-card__media">' + mediaHTML + '</div>' +
-									'<div class="md-card__body">' +
-										'<div class="md-card__meta">' + catsHTML + '</div>' +
-										'<h2 class="md-card__title"><a href="' + post.link + '">' + post.title.rendered + '</a></h2>' +
-										'<div class="md-card__excerpt">' + post.excerpt.rendered + '</div>' +
-										'<div class="md-card__footer">' +
-											'<div class="md-card__author-date">' +
-												'<span class="material-symbols-outlined">calendar_today</span>' +
-												'<time>' + dateStr + '</time>' +
-												'<span>&bull;</span>' +
-												'<span>' + readingTime + '</span>' +
-											'</div>' +
-											'<a href="' + post.link + '" class="md-btn md-btn--tonal">Đọc tiếp</a>' +
+								html += '<a href="' + post.link + '" class="md-search-suggestion-item">' +
+									'<div class="md-search-suggestion-item__image">' + imageHTML + '</div>' +
+									'<div class="md-search-suggestion-item__info">' +
+										'<div class="md-search-suggestion-item__title">' + post.title.rendered + '</div>' +
+										'<div class="md-search-suggestion-item__meta">' +
+											'<span>' + dateStr + '</span>' +
+											'<span>&bull;</span>' +
+											'<span>' + readingTime + '</span>' +
 										'</div>' +
 									'</div>' +
-								'</article>';
+								'</a>';
 							});
-							html += '</div>';
 
-							mdContent.innerHTML = html;
+							suggestionsContainer.innerHTML = html;
 						})
 						.catch(function(err) {
 							console.error(err);
-							mdContent.innerHTML = '<div class="md-no-posts">' +
+							if (currentQuery !== query) return;
+							suggestionsContainer.innerHTML = '<div class="md-search-suggestions__status">' +
 								'<span class="material-symbols-outlined">error</span>' +
-								'<h2>Có lỗi xảy ra</h2>' +
-								'<p>Không thể kết nối đến máy chủ. Vui lòng thử lại sau.</p>' +
+								'Có lỗi xảy ra' +
 							'</div>';
 						});
 				}, 300);
 			});
 
-			// Check if URL already contains ?q= on load
-			var urlParams = new URLSearchParams(window.location.search);
-			var initialQuery = urlParams.get('q');
-			if (initialQuery) {
-				searchInput.value = initialQuery;
-				var event = new Event('input', { bubbles: true });
-				searchInput.dispatchEvent(event);
+			// Show suggestions dropdown if user focuses input and there is text
+			searchInput.addEventListener('focus', function() {
+				if (searchInput.value.trim().length > 0) {
+					suggestionsContainer.classList.add('is-visible');
+				}
+			});
+
+			// Hide dropdown when clicking outside
+			document.addEventListener('click', function(e) {
+				if (!searchInput.contains(e.target) && !suggestionsContainer.contains(e.target)) {
+					suggestionsContainer.classList.remove('is-visible');
+				}
+			});
+
+			// Hide dropdown when pressing Escape
+			document.addEventListener('keydown', function(e) {
+				if (e.key === 'Escape') {
+					suggestionsContainer.classList.remove('is-visible');
+				}
+			});
+
+			// Prevent form submission if query is empty
+			var searchForm = searchInput.form;
+			if (searchForm) {
+				searchForm.addEventListener('submit', function(e) {
+					if (searchInput.value.trim().length === 0) {
+						e.preventDefault();
+					}
+				});
 			}
 		}
 	})();

@@ -46,10 +46,13 @@
 	</nav>
 
 	<!-- Search Bar -->
-	<div class="md-appbar__search">
-		<span class="material-symbols-outlined md-appbar__search-icon">search</span>
-		<input type="search" id="md-search-input" placeholder="Tìm kiếm bài viết..." aria-label="Tìm kiếm" autocomplete="off">
-	</div>
+	<form action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get" class="md-appbar__search" role="search">
+		<button type="submit" class="md-appbar__search-submit" aria-label="Tìm kiếm">
+			<span class="material-symbols-outlined md-appbar__search-icon">search</span>
+		</button>
+		<input type="search" name="s" id="md-search-input" placeholder="Tìm kiếm bài viết..." aria-label="Tìm kiếm" autocomplete="off" value="<?php echo get_search_query(); ?>">
+		<div class="md-search-suggestions" id="md-search-suggestions"></div>
+	</form>
 
 	<!-- Actions -->
 	<div class="md-appbar__actions">
