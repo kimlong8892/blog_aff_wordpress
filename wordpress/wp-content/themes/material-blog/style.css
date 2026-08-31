@@ -770,6 +770,13 @@ img {
   transform: scale(1.03);
 }
 
+.md-horizontal-card__media a,
+.md-pinned-item__media a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .md-fallback-logo {
   width: 100% !important;
   height: 100% !important;
