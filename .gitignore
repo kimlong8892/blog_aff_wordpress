@@ -47,3 +47,5 @@ error_log
 # === Node (nếu dùng build tools cho theme/plugin) ===
 node_modules/
 package-lock.json
+
+bai_viet
